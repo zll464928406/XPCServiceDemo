@@ -15,4 +15,10 @@
     NSString *response = [aString uppercaseString];
     reply(response);
 }
+
+- (void)myType:(NSArray *)persons withReply:(void (^)(NSString *))reply
+{
+    
+    reply([[persons firstObject] name]);
+}
 @end

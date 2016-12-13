@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "XPCServiceProtocol.h"
+
 
 @interface AppDelegate ()
 
@@ -18,22 +18,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
     
-    //cn.personer.XPCService
-    
-    NSXPCInterface *myCookieInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCServiceProtocol)];
-    NSXPCConnection *connectionToService = [[NSXPCConnection alloc] initWithServiceName:@"cn.personer.XPC"];
-    connectionToService.remoteObjectInterface = myCookieInterface;
-    [connectionToService resume];
-    
-    
-    
-    [[connectionToService remoteObjectProxy] upperCaseString:@"hello" withReply:^(NSString *aString) {
-        // We have received a response. Update our text field, but do it on the main thread.
-        NSLog(@"Result string was: %@", aString);
-    }];
 
-    
-//    [connectionToService invalidate];
     
     
 }
