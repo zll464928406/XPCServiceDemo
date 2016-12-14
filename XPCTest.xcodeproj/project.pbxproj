@@ -12,7 +12,6 @@
 		A26800131DFEE835007DC3FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A26800121DFEE835007DC3FF /* main.m */; };
 		A26800171DFEE835007DC3FF /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A268000C1DFEE834007DC3FF /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A268004A1E004AF2007DC3FF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A26800491E004AF2007DC3FF /* Person.m */; };
-		A26800781E006A0C007DC3FF /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = A26800771E006A0C007DC3FF /* Dog.m */; };
 		A268FFF61DFEE803007DC3FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A268FFF51DFEE803007DC3FF /* AppDelegate.m */; };
 		A268FFF91DFEE803007DC3FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A268FFF81DFEE803007DC3FF /* main.m */; };
 		A268FFFC1DFEE803007DC3FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A268FFFB1DFEE803007DC3FF /* ViewController.m */; };
@@ -54,9 +53,6 @@
 		A26800141DFEE835007DC3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A26800481E004AF2007DC3FF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A26800491E004AF2007DC3FF /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		A26800761E006A0C007DC3FF /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
-		A26800771E006A0C007DC3FF /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
-		A26800791E006A62007DC3FF /* EatProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatProtocol.h; sourceTree = "<group>"; };
 		A268FFF11DFEE803007DC3FF /* XPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A268FFF41DFEE803007DC3FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A268FFF51DFEE803007DC3FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,9 +119,6 @@
 				A268FFFB1DFEE803007DC3FF /* ViewController.m */,
 				A26800481E004AF2007DC3FF /* Person.h */,
 				A26800491E004AF2007DC3FF /* Person.m */,
-				A26800791E006A62007DC3FF /* EatProtocol.h */,
-				A26800761E006A0C007DC3FF /* Dog.h */,
-				A26800771E006A0C007DC3FF /* Dog.m */,
 				A268FFFD1DFEE803007DC3FF /* Assets.xcassets */,
 				A268FFFF1DFEE803007DC3FF /* Main.storyboard */,
 				A26800021DFEE803007DC3FF /* Info.plist */,
@@ -254,7 +247,6 @@
 			files = (
 				A268FFFC1DFEE803007DC3FF /* ViewController.m in Sources */,
 				A268FFF91DFEE803007DC3FF /* main.m in Sources */,
-				A26800781E006A0C007DC3FF /* Dog.m in Sources */,
 				A268004A1E004AF2007DC3FF /* Person.m in Sources */,
 				A268FFF61DFEE803007DC3FF /* AppDelegate.m in Sources */,
 			);
@@ -376,6 +368,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = XPCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.personer.XPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -388,6 +381,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = XPCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.personer.XPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

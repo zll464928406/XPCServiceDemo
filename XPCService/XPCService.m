@@ -16,9 +16,19 @@
     reply(response);
 }
 
-- (void)myType:(NSArray *)persons withReply:(void (^)(NSString *))reply
+- (void)hello:(NSString *)name
 {
     
-    reply([[persons firstObject] name]);
 }
+
+-(void)mytype:(Person *)person withReply:(void (^)(Person *))reply
+{
+    reply(person);
+}
+
+
+//实现app中的代理
+
+
+
 @end

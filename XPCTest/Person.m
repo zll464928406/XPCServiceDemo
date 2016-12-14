@@ -10,24 +10,26 @@
 
 @implementation Person
 
-+(BOOL)supportsSecureCoding
-{
-    return YES;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
     if (self)
     {
-        _name = [coder decodeObjectOfClass:[NSString class] forKey:@"name"];
+        _name = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"name"];
     }
-    
     return self;
 }
-- (void)encodeWithCoder:(NSCoder *)coder
+
++ (BOOL)supportsSecureCoding
 {
-    [coder encodeObject:_name forKey:@"name"];
+    return YES;
 }
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:_name forKey:@"name"];
+
+}
+
 
 @end
