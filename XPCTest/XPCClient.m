@@ -12,7 +12,6 @@
 
 -(void)acceptMessageFromService:(NSString *)message
 {
-    
     NSLog(@"-------------%@",message);
 }
 
