@@ -18,7 +18,7 @@
 //第二种方式,通过设置代理的方式
 - (void)hello:(NSString *)name;
 
-//自定义的类型
+//接收自定义类型的方法
 - (void)mytype:(Person *)person withReply:(void(^)(Person *))reply;
 
 

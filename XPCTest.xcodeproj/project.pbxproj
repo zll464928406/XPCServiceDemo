@@ -16,6 +16,8 @@
 		A268FFF91DFEE803007DC3FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A268FFF81DFEE803007DC3FF /* main.m */; };
 		A268FFFC1DFEE803007DC3FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A268FFFB1DFEE803007DC3FF /* ViewController.m */; };
 		A268FFFE1DFEE803007DC3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A268FFFD1DFEE803007DC3FF /* Assets.xcassets */; };
+		A33916DC1E0223A400166795 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A26800491E004AF2007DC3FF /* Person.m */; };
+		A33916E11E022C3B00166795 /* XPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A33916E01E022C3B00166795 /* XPCClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		A268FFFA1DFEE803007DC3FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A268FFFB1DFEE803007DC3FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A268FFFD1DFEE803007DC3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A33916DE1E022C2700166795 /* XPCClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCClientProtocol.h; sourceTree = "<group>"; };
+		A33916DF1E022C3B00166795 /* XPCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCClient.h; sourceTree = "<group>"; };
+		A33916E01E022C3B00166795 /* XPCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 				A268FFFB1DFEE803007DC3FF /* ViewController.m */,
 				A26800481E004AF2007DC3FF /* Person.h */,
 				A26800491E004AF2007DC3FF /* Person.m */,
+				A33916DD1E022BFB00166795 /* XPCClient */,
 				A268FFFD1DFEE803007DC3FF /* Assets.xcassets */,
 				A268FFFF1DFEE803007DC3FF /* Main.storyboard */,
 				A26800021DFEE803007DC3FF /* Info.plist */,
@@ -133,6 +139,16 @@
 				A268FFF81DFEE803007DC3FF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A33916DD1E022BFB00166795 /* XPCClient */ = {
+			isa = PBXGroup;
+			children = (
+				A33916DE1E022C2700166795 /* XPCClientProtocol.h */,
+				A33916DF1E022C3B00166795 /* XPCClient.h */,
+				A33916E01E022C3B00166795 /* XPCClient.m */,
+			);
+			name = XPCClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33916DC1E0223A400166795 /* Person.m in Sources */,
 				A26800131DFEE835007DC3FF /* main.m in Sources */,
 				A26800111DFEE835007DC3FF /* XPCService.m in Sources */,
 			);
@@ -249,6 +266,7 @@
 				A268FFF91DFEE803007DC3FF /* main.m in Sources */,
 				A268004A1E004AF2007DC3FF /* Person.m in Sources */,
 				A268FFF61DFEE803007DC3FF /* AppDelegate.m in Sources */,
+				A33916E11E022C3B00166795 /* XPCClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
