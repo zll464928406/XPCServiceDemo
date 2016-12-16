@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "XPCServiceProtocol.h"
 #import "Person.h"
+#import "XPCClient.h"
 
 
 @interface ViewController ()
@@ -36,11 +37,13 @@
 #pragma mark 设置连接的代码
 - (void)setConnection
 {
-    //方式1:XPC Service的方式
-    self.connectionToService = [[NSXPCConnection alloc] initWithServiceName:@"cn.personer.XPC"];
-    //方式2:Mach Service的方式,这种方式的用法目前还不清楚
-    //    self.connectionToService = [[NSXPCConnection alloc] initWithMachServiceName:@"cn.personer.XPC" options:0];
     
+    //XPC Service的方式
+    self.connectionToService = [[NSXPCConnection alloc] initWithServiceName:@"cn.personer.XPC"];
+    
+    //设置响应server端信息的配置
+    self.connectionToService.exportedObject = [XPCClient new];
+    self.connectionToService.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCClientProtocol)];
     
     //设置远程连接的协议
     self.connectionToService.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCServiceProtocol)];
@@ -52,6 +55,7 @@
     _service = [self.connectionToService remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
         //这里面是错误处理的代码
     }];
+    
     [self.connectionToService resume];
 }
 #pragma mark - 最简单的进程间通讯的传递,单向传递,app给Service发送消息,service反馈消息给app
@@ -64,11 +68,13 @@
     }];
 }
 
-#pragma mark - 
+#pragma mark - service主动向app发送信息
 - (IBAction)mySelfBtnClick:(NSButton *)sender
 {
     
-    [_service hello:@"kobe"];
+    [_service sendToClient:@"kobe" withReply:^(NSString *reply) {
+        NSLog(@"-----------%@",reply);
+    }];
 
 }
 
@@ -91,6 +97,10 @@
     }];
 
 }
+
+
+
+
 
 
 - (void)setRepresentedObject:(id)representedObject {

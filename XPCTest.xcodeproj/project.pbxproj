@@ -18,7 +18,7 @@
 		A268FFFE1DFEE803007DC3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A268FFFD1DFEE803007DC3FF /* Assets.xcassets */; };
 		A33916DC1E0223A400166795 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A26800491E004AF2007DC3FF /* Person.m */; };
 		A33916E11E022C3B00166795 /* XPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A33916E01E022C3B00166795 /* XPCClient.m */; };
-		A33916E41E022D5400166795 /* ClientListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33916E31E022D5400166795 /* ClientListenerDelegate.m */; };
+		A377E9E61E03D7A600938217 /* ServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A377E9E51E03D7A600938217 /* ServiceDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,8 @@
 		A33916DE1E022C2700166795 /* XPCClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCClientProtocol.h; sourceTree = "<group>"; };
 		A33916DF1E022C3B00166795 /* XPCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCClient.h; sourceTree = "<group>"; };
 		A33916E01E022C3B00166795 /* XPCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCClient.m; sourceTree = "<group>"; };
-		A33916E21E022D5400166795 /* ClientListenerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientListenerDelegate.h; sourceTree = "<group>"; };
-		A33916E31E022D5400166795 /* ClientListenerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientListenerDelegate.m; sourceTree = "<group>"; };
+		A377E9E41E03D7A600938217 /* ServiceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceDelegate.h; sourceTree = "<group>"; };
+		A377E9E51E03D7A600938217 /* ServiceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,8 @@
 				A268000F1DFEE835007DC3FF /* XPCService.h */,
 				A26800101DFEE835007DC3FF /* XPCService.m */,
 				A26800121DFEE835007DC3FF /* main.m */,
+				A377E9E41E03D7A600938217 /* ServiceDelegate.h */,
+				A377E9E51E03D7A600938217 /* ServiceDelegate.m */,
 				A26800141DFEE835007DC3FF /* Info.plist */,
 			);
 			path = XPCService;
@@ -150,8 +152,6 @@
 				A33916DE1E022C2700166795 /* XPCClientProtocol.h */,
 				A33916DF1E022C3B00166795 /* XPCClient.h */,
 				A33916E01E022C3B00166795 /* XPCClient.m */,
-				A33916E21E022D5400166795 /* ClientListenerDelegate.h */,
-				A33916E31E022D5400166795 /* ClientListenerDelegate.m */,
 			);
 			name = XPCClient;
 			sourceTree = "<group>";
@@ -257,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A377E9E61E03D7A600938217 /* ServiceDelegate.m in Sources */,
 				A33916DC1E0223A400166795 /* Person.m in Sources */,
 				A26800131DFEE835007DC3FF /* main.m in Sources */,
 				A26800111DFEE835007DC3FF /* XPCService.m in Sources */,
@@ -270,7 +271,6 @@
 				A268FFFC1DFEE803007DC3FF /* ViewController.m in Sources */,
 				A268FFF91DFEE803007DC3FF /* main.m in Sources */,
 				A268004A1E004AF2007DC3FF /* Person.m in Sources */,
-				A33916E41E022D5400166795 /* ClientListenerDelegate.m in Sources */,
 				A268FFF61DFEE803007DC3FF /* AppDelegate.m in Sources */,
 				A33916E11E022C3B00166795 /* XPCClient.m in Sources */,
 			);

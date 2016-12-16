@@ -10,14 +10,17 @@
 
 @implementation XPCService
 
-// This implements the example protocol. Replace the body of this class with the implementation of this service's protocol.
+
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
     NSString *response = [aString uppercaseString];
     reply(response);
 }
 
-- (void)hello:(NSString *)name
+- (void)sendToClient:(NSString *)info withReply:(void (^)(NSString *))reply
 {
+    reply(@"service 主动发送给app");
+    
+    
     
 }
 
@@ -25,10 +28,6 @@
 {
     reply(person);
 }
-
-
-//实现app中的代理
-
 
 
 @end
