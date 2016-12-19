@@ -73,6 +73,13 @@
 
 }
 
+- (IBAction)blockBtnClick:(NSButton *)sender
+{
+    [[[ClientManager manager] service] block:^(NSString *title) {
+        NSLog(@"%@---",title);
+    }];
+    
+}
 
 
 
