@@ -1,16 +1,13 @@
-//
-//  Person.m
-//  XPCTest
-//
-//  Created by 张令林 on 2016/12/13.
-//  Copyright © 2016年 personer. All rights reserved.
-//
+/*
+ 传递自定义的类,需要类继承自NSSecureCoding协议
+ 然后实现下面的三个方法,不过引入AutoCoding.h和AutoCoding.m后会在运行时做相应的操作,如果不引入这两个文件的话就一定需要实现
+ */
 
 #import "Person.h"
 
 @implementation Person
 
-
+/*
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
@@ -31,6 +28,7 @@
     [aCoder encodeObject:_name forKey:@"name"];
 
 }
+ */
 
 
 @end

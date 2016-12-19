@@ -25,7 +25,7 @@
     return instance;
 }
 
-
+#pragma mark - 设个方法用来坚挺连接,每次app创建一个新的连接就会执行一次,也就是说如果只有一个连接,那么就执行一次
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection
 {
     //设置service端接收消息的配置

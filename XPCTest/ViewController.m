@@ -14,9 +14,6 @@
 
 @interface ViewController ()
 
-
-@property (nonatomic,strong) NSXPCConnection *connectionToService;
-
 @property (nonatomic,strong) Person *person;
 
 @end
@@ -28,7 +25,7 @@
     
     self.person = [[Person alloc] init];
     self.person.name = @"kobe-my";
-    
+    //如果不想连接断开,可以添加一个定时器一直保持连接
 }
 
 #pragma mark - 最简单的进程间通讯的传递,单向传递,app给Service发送消息,service反馈消息给app
@@ -89,6 +86,6 @@
 
 -(void)dealloc
 {
-    [self.connectionToService invalidate];
+    
 }
 @end
