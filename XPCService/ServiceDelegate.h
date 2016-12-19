@@ -11,8 +11,9 @@
 #import "XPCClient.h"
 
 @interface ServiceDelegate : NSObject<NSXPCListenerDelegate>
-{
-    id<XPCClientProtocol> _service;
-}
+
+@property(nonatomic,strong) id<XPCClientProtocol> service;
+
++ (instancetype)manager;
 
 @end

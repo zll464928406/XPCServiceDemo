@@ -7,6 +7,7 @@
 //
 
 #import "XPCService.h"
+#import "ServiceDelegate.h"
 
 @implementation XPCService
 
@@ -19,6 +20,7 @@
 - (void)sendToClient:(NSString *)info withReply:(void (^)(NSString *))reply
 {
     reply(@"service 主动发送给app");
+    [[[ServiceDelegate manager] service] acceptMessageFromService:@"111111111111111111"];
     
     
     

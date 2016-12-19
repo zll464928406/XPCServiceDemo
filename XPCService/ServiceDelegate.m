@@ -8,7 +8,22 @@
 
 #import "ServiceDelegate.h"
 
+@interface ServiceDelegate ()
+
+
+@end
+
 @implementation ServiceDelegate
+
++ (instancetype)manager
+{
+    static ServiceDelegate *instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[ServiceDelegate alloc] init];
+    });
+    return instance;
+}
 
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection
@@ -24,10 +39,6 @@
     _service = [newConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
         
     }];
-    
-    //向app发送信息
-    [_service acceptMessageFromService:@"nihaoaaaa"];
-    
     
     
     return YES;
