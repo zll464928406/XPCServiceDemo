@@ -34,4 +34,10 @@
 }
 
 
+- (void)block:(void(^)(NSString *title))block
+{
+    NSString *str = @"block";
+    block(str);
+}
+
 @end

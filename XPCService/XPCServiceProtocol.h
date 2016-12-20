@@ -22,6 +22,10 @@
 - (void)mytype:(Person *)person withReply:(void(^)(Person *))reply;
 
 
+//第四种:接收block的传递
+- (void)block:(void(^)(NSString *title))block;
+
+
 @end
 
 
