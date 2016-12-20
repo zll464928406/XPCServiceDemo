@@ -12,7 +12,8 @@
 @implementation XPCService
 
 
-- (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
+- (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply
+{
     NSString *response = [aString uppercaseString];
     
     reply(response);
@@ -21,11 +22,8 @@
 
 - (void)sendToClient:(NSString *)info withReply:(void (^)(NSString *))reply
 {
-    reply(@"service 主动发送给app");
-    [[[ServiceDelegate manager] service] acceptMessageFromService:@"111111111111111111"];
-    
-    
-    
+    reply(@"service反馈的信息");
+    [[[ServiceDelegate manager] service] acceptMessageFromService:@"service 主动发送给app的消息"];
 }
 
 -(void)mytype:(Person *)person withReply:(void (^)(Person *))reply
@@ -38,6 +36,25 @@
 {
     NSString *str = @"block";
     block(str);
+}
+
+- (void)whiteList:(NSArray *)array
+{
+    NSLog(@"%@",array);
+}
+
+
+-(void)protocolPerson:(id<PersonProtocol>)person
+{
+    [person eat];
+}
+
+
+
+/******************************************以下是测试数据****************************************/
+- (void)test:(void (^)(NSString *))reply
+{
+
 }
 
 @end

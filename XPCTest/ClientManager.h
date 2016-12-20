@@ -13,7 +13,7 @@
 @interface ClientManager : NSObject
 
 @property (nonatomic,strong) NSXPCConnection *connectionToService;
-@property (nonatomic,strong) id<XPCServiceProtocol> service;;
+@property (nonatomic,strong) id<XPCServiceProtocol> service;
 
 + (instancetype)manager;
 - (void)addConnection:(NSString *)serviceName;

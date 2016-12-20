@@ -7,6 +7,7 @@
 //
 
 #import "ServiceDelegate.h"
+#import "PersonProtocol.h"
 
 @interface ServiceDelegate ()
 
@@ -40,8 +41,28 @@
         
     }];
     
+        
+    //设置添加白名单和使用代理传递参数的时候使用下面的方法
+    [self setWhiteList:newConnection];
+    
     
     return YES;
+}
+
+#pragma mark 设置白名单
+- (void)setWhiteList:(NSXPCConnection *)connection
+{
+    /*************************设置白名单***********************************/
+    NSSet *expectedClasses = [NSSet setWithObjects:[NSArray class],[Person class],nil];
+    [connection.exportedInterface setClasses:expectedClasses forSelector:@selector(whiteList:)
+                                  argumentIndex:0 //第一个参数
+                                        ofReply:NO//在方法本身。
+     ];
+    
+    /*************************使用代理传递参数***********************************/
+    NSXPCInterface *myServiceInterface = connection.exportedInterface;
+    NSXPCInterface *myPersonInterface = [NSXPCInterface interfaceWithProtocol:@protocol(PersonProtocol)];
+    [myServiceInterface setInterface: myPersonInterface forSelector: @selector(protocolPerson:) argumentIndex: 0 ofReply: NO];
 }
 
 @end

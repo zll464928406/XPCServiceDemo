@@ -77,6 +77,7 @@
 		A377E9F01E0798D800938217 /* ClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientManager.m; sourceTree = "<group>"; };
 		A377E9FC1E07ACB500938217 /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
 		A377E9FD1E07ACB500938217 /* AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCoding.m; sourceTree = "<group>"; };
+		A377EA401E092A1600938217 /* PersonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 				A268FFFB1DFEE803007DC3FF /* ViewController.m */,
 				A26800481E004AF2007DC3FF /* Person.h */,
 				A26800491E004AF2007DC3FF /* Person.m */,
+				A377EA401E092A1600938217 /* PersonProtocol.h */,
 				A33916DD1E022BFB00166795 /* XPCClient */,
 				A268FFFD1DFEE803007DC3FF /* Assets.xcassets */,
 				A268FFFF1DFEE803007DC3FF /* Main.storyboard */,

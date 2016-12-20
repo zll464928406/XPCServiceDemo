@@ -25,6 +25,14 @@
 //第四种:接收block的传递
 - (void)block:(void(^)(NSString *title))block;
 
+//第五种:白名单类型的传递
+- (void)whiteList:(NSArray *)array;
+
+//第六种:通过代理传递对象
+- (void)protocolPerson:(id <PersonProtocol>)person;
+
+/******************************************以下是测试数据****************************************/
+- (void)test:(void (^)(NSString *))reply;
 
 @end
 

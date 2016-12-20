@@ -30,5 +30,10 @@
 }
  */
 
+#pragma mark - 实现代理的方法,这个是为了使用代理的方式来传递person
+- (void)eat
+{
+    NSLog(@"person is eating!");
+}
 
 @end
