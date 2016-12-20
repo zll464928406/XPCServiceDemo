@@ -14,7 +14,9 @@
 
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
     NSString *response = [aString uppercaseString];
+    
     reply(response);
+    
 }
 
 - (void)sendToClient:(NSString *)info withReply:(void (^)(NSString *))reply
